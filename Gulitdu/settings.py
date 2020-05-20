@@ -17,6 +17,7 @@ import sys
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # 将自己定义的包 加入python 搜索环境变量中
 sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
+sys.path.insert(0, os.path.join(BASE_DIR, 'extra_apps'))
 
 
 # Quick-start development settings - unsuitable for production
@@ -44,6 +45,8 @@ INSTALLED_APPS = [
     'courses.apps.CoursesConfig',
     'orgs.apps.OrgsConfig',
     'operations.apps.OperationsConfig',
+    'xadmin.apps.XAdminConfig',
+    'crispy_forms',
 ]
 
 AUTH_USER_MODEL = 'users.UserProfile'
