@@ -12,7 +12,7 @@ class UserProfile(AbstractUser):
     address = models.CharField(max_length=200, verbose_name='用户地址', null=True, blank=True)
     phone = models.CharField(max_length=11, verbose_name='用户手机', null=True, blank=True)
     email = models.CharField(max_length=50, verbose_name='用户邮箱', null=True, blank=True)
-    creat_time = models.DateTimeField(default=datetime.now(), verbose_name='添加时间')
+    create_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
 
     def __str__(self):
         return self.username
@@ -26,7 +26,7 @@ class BannerInfo(models.Model):
     image = models.ImageField(upload_to='banner/', verbose_name='轮播图', max_length=200)
     url = models.URLField(default='http://www.baidu.com', max_length=200, verbose_name='图片链接')
     title = models.CharField(max_length=200, verbose_name='图片标题', null=True, blank=True)
-    creat_time = models.DateTimeField(default=datetime.now(), verbose_name='添加时间')
+    create_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
 
     def __str__(self):
         return str(self.image)
